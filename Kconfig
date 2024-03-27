@@ -1,0 +1,12 @@
+# Sensor data simulator
+#
+# Copyright (c) 2019 Nordic Semiconductor
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+#
+
+DT_COMPAT_ZMK_BEHAVIOR_MOUSE_KEY_TOGGLE := zmk,behavior-mouse-key-toggle
+
+config ZMK_BEHAVIOR_MOUSE_KEY_TOGGLE
+		bool
+		default $(dt_compat_enabled,$(DT_COMPAT_ZMK_BEHAVIOR_MOUSE_KEY_TOGGLE))

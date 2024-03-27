@@ -1,0 +1,13 @@
+/ {
+    behaviors {
+        /omit-if-no-ref/ mktg: mouse_key_toggle {
+            compatible = "zmk,behavior-mouse-key-toggle";
+            #binding-cells = <1>;
+        };
+    };
+
+    mktg_input_listener {
+        compatible = "zmk,input-listener";
+        device = <&mktg>;
+    };
+};
