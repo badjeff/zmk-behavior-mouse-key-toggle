@@ -41,3 +41,9 @@ Add the behavior in `shield.keymap`.
 
 };
 ```
+
+Enable input subsystem in your `<shield>.config` file:
+
+```conf
+CONFIG_INPUT=y
+```
