@@ -12,9 +12,12 @@
 
 #include <zmk/behavior.h>
 #include <zmk/hid.h>
-#include <zmk/mouse/hid.h>
 #include <zephyr/input/input.h>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+
+#ifndef ZMK_MOUSE_HID_NUM_BUTTONS
+#define ZMK_MOUSE_HID_NUM_BUTTONS 0x05
+#endif
 
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
