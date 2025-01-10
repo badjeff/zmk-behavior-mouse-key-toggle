@@ -30,7 +30,7 @@ struct behavior_mouse_key_toggle_data {
 static int behavior_mouse_key_toggle_init(const struct device *dev) { return 0; };
 
 static void process_key_state(const struct device *dev, int32_t val, bool pressed) {
-#if IS_ENABLED(CONFIG_ZMK_MOUSE)
+#if IS_ENABLED(CONFIG_ZMK_POINTING)
     for (int i = 0; i < ZMK_MOUSE_HID_NUM_BUTTONS; i++) {
         if (val & BIT(i)) {
             WRITE_BIT(val, i, 0);
